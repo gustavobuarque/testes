@@ -65,20 +65,23 @@ a {
     margin-left: 20px;
 }
 
-.nav li a.link-barra-brasil:hover::before {
+.nav li:hover a.link-barra-brasil::before {
     opacity: 1;
     /* padding: 15px 0 15px 0; */
 
 }
 
-/* 
-.nav li a.link-barra-brasil:hover+.nav li:not(:hover) a {
+
+
+/* .nav li:hover+li a {
     opacity: 0.3;
+
 } */
 
-.nav li:not(:hover) a.link-barra-brasil:hover {
+
+/* .nav li:not(:hover) a.link-barra-brasil:hover {
     opacity: 0.3;
-}
+} */
 
 .nav li a.link-barra-brasil::before {
     content: "";
@@ -90,4 +93,11 @@ a {
     background-repeat: no-repeat;
     opacity: 0;
     transition: opacity 300ms;
+}
+
+li:hover+li:not(:hover),
+li:hover+li+li a,
+li:hover+li+li+li a,
+li:hover+li+li+li+li a {
+    opacity: 0.3;
 }
