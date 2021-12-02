@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+#barra-brasil {
+    background-color: #222;
+}
+
+.conteudo-barra-brasil {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1150px;
+    width: 95%;
+    margin: 0 auto;
+    height: 40px;
+
+}
+
+.barra-brasil {
+    background-image: url('./govbr.svg');
+    background-repeat: no-repeat;
+    display: block;
+    width: 66px;
+    height: 14px;
+    color: transparent;
+    font-size: 0;
+}
+
+.nav {
+    display: block;
+    display: flex;
+    align-items: center;
+}
+
+.nav li {
+    list-style-type: none;
+}
+
+.nav li {
+    border-left: 1px solid rgba(151, 151, 151, 0.3);
+    margin: 0 5px 0 25px;
+}
+
+.nav li:first-of-type {
+    border-left: none;
+}
+
+.nav li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.nav li a.link-barra-brasil:hover::before {
+    opacity: 1;
+    /* padding: 15px 0 15px 0; */
+
+}
+
+/* 
+.nav li a.link-barra-brasil:hover+.nav li:not(:hover) a {
+    opacity: 0.3;
+} */
+
+.nav li:not(:hover) a.link-barra-brasil:hover {
+    opacity: 0.3;
+}
+
+.nav li a.link-barra-brasil::before {
+    content: "";
+    display: inline-block;
+    width: 11px;
+    height: 10px;
+    margin-right: 6px;
+    background-image: url('./link.svg');
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 300ms;
+}
